@@ -89,6 +89,7 @@ Open up the webpack.mix.js change it to:
 
 # Implement Tailwindcss into the app.css
 Open up /resources/css/app.css and add following lines on top:
+    
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
