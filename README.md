@@ -16,12 +16,15 @@ your own Project.
 ## Installing Laravel
 
 # Standart Laravel Installation
-    Open up a folder in which you want your new project.
-    *change ProjectName to the name of your project
+Open up a folder in which you want your new project.
+*change ProjectName to the name of your project
+
+Run in Terminal:
     $ curl -s "http://laravel.build/ProjectName" | bash
 
 # Add phpmyadmin to the docker-compose.yml
-    Open up the docker-compose.yml and add following lines. (e.g after the mysql service)
+Open up the docker-compose.yml and add following lines. (e.g after the mysql service)
+
     phpmyadmin:
         image: phpmyadmin/phpmyadmin:5
         ports:
@@ -49,11 +52,13 @@ search for
 activate it by deleting the //
 
 # Install Laravel Fortify
+Run in Terminal:
     $ sail composer require laravel/fortify
     $ sail artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
     $ sail artisan migrate
 
 # Install Tailwindcss
+Run in Terminal:
     $ sail npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
     $ sail npx tailwindcss init
 
@@ -94,6 +99,7 @@ Open up /resources/css/app.css and add following lines on top:
     @tailwind components;
     @tailwind utilities;
 
+Run in Terminal:
     $ sail npm run dev
 
 ## How to work with Tailwindcss Jit
