@@ -59,7 +59,7 @@ activate it by deleting the //
 
 # Configure Tailwindcss
 Open the tailwind.config.js and change it to:
-    // tailwind.config.js
+    
     module.exports = {
         mode: 'jit',
         purge: [
@@ -81,7 +81,7 @@ Open the tailwind.config.js and change it to:
 
 # Adept the webpack.mix.js
 Open up the webpack.mix.js change it to:
-    // webpack.mix.js
+    
     mix.js("resources/js/app.js", "public/js")
         .postCss("resources/css/app.css", "public/css", [
             require("tailwindcss"),
