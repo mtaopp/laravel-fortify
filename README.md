@@ -8,6 +8,7 @@ your own Project.
 
 - Install Laravel (using curl)
     - install phpmyadmin (docker-compose.yml)
+    - activate protected Route (app/Providers/RouteServiceProviders)
     - install Fortify (using composer)
     - install Tailwind (using npm)
 
@@ -35,6 +36,17 @@ your own Project.
                 condition: service_healthy
         networks:
             - sail
+
+# Activate protected routes
+To write shorter Routes using methods like 
+Route::get('/home', 'HomeController@index')
+
+open up app/Providers/RouteServiceProviders
+
+    search for 
+    // protected $namespace = 'App\\Http\\Controllers';
+
+    activate it by deleting the
 
 # Install Laravel Fortify
     $ sail composer require laravel/fortify
