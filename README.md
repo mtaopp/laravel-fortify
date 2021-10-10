@@ -41,12 +41,12 @@ your own Project.
 To write shorter Routes using methods like 
 Route::get('/home', 'HomeController@index')
 
-open up app/Providers/RouteServiceProviders
+Open up app/Providers/RouteServiceProviders
+search for 
 
-    search for 
     // protected $namespace = 'App\\Http\\Controllers';
 
-    activate it by deleting the
+activate it by deleting the //
 
 # Install Laravel Fortify
     $ sail composer require laravel/fortify
@@ -58,7 +58,7 @@ open up app/Providers/RouteServiceProviders
     $ sail npx tailwindcss init
 
 # Configure Tailwindcss
-    Open the tailwind.config.js and change it to:
+Open the tailwind.config.js and change it to:
     // tailwind.config.js
     module.exports = {
         mode: 'jit',
@@ -80,7 +80,7 @@ open up app/Providers/RouteServiceProviders
     }
 
 # Adept the webpack.mix.js
-    Open up the webpack.mix.js change it to:
+Open up the webpack.mix.js change it to:
     // webpack.mix.js
     mix.js("resources/js/app.js", "public/js")
         .postCss("resources/css/app.css", "public/css", [
@@ -88,7 +88,7 @@ open up app/Providers/RouteServiceProviders
     ]);
 
 # Implement Tailwindcss into the app.css
-    Open up /resources/css/app.css and add following lines on top:
+Open up /resources/css/app.css and add following lines on top:
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
@@ -101,3 +101,4 @@ we run: sail npm run dev or sail npm run watch.
 So to use it efficiently we use sail npm run watch.
 Then after we change a class of an element we only need to refresh the
 page and the tailwindcss will take its place.
+    $ sail npm run watch
