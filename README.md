@@ -30,13 +30,13 @@ Open up the docker-compose.yml and add following lines. (e.g after the mysql ser
         image: phpmyadmin/phpmyadmin:5
         ports:
             - 8080:80
-            links:
-        - mysql
-            environment:
-        PMA_HOST: mysql
-        PMA_PORT: 3306
-            depends_on:
-                mysql:
+        links:
+            - mysql
+        environment:
+            PMA_HOST: mysql
+            PMA_PORT: 3306
+        depends_on:
+            mysql:
                 condition: service_healthy
         networks:
             - sail
